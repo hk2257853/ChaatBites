@@ -23,7 +23,7 @@ function Menu() {
 
   useEffect(() => {
     try {
-      api.fetchAdminItems()
+      api.getMenuItems()
         .then((res) => {
           setItem(res.data);
         });

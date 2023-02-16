@@ -5,6 +5,7 @@ import cors from "cors";
 import userRoutes from "./routes/users.js"
 import menuRoutes from "./routes/menu.js"
 import parkingRoutes from "./routes/parking.js"
+import cartRoutes from "./routes/cartroute.js"
 
 const app = express();
 
@@ -17,6 +18,7 @@ const PORT = 1300;
 app.use("/user", userRoutes);
 app.use("/menu", menuRoutes);
 app.use("/parking", parkingRoutes)
+app.use("/cart", cartRoutes)
 
 // const CONNECTION_URL = "mongodb://0.0.0.0:27017/ChaatBites"; // for non-dockerized app
 // const CONNECTION_URL = "mongodb://mongo:27017/PS3DB"; // for dockerized app
