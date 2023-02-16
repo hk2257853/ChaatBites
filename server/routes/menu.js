@@ -1,6 +1,6 @@
 import express from "express";
 import auth from "../middleware/auth.js";
-import { createMenuItem, getMenuItems } from "../controller/Menucontroller.js";
+import { createMenuItem, getMenuItems } from "../controller/menucontroller.js";
 
 const router = express.Router();
 // TODO: add auth middleware as param
