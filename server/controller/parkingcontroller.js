@@ -15,18 +15,18 @@ export const getParkingStatus = async (req, res) => {
   }
 };
 
-// TODO: complete this
+// TODO: complete this. Send the mongo id using the frontend... parking id is req?
 export const updateParkingStatus = async (req, res) => {
-  // const { id } = req.params;
-  // const { parkingid, occupied } = req.body;
+  const { id } = req.params;
+  const { occupied } = req.body;
 
-  // TODO: change for parking id
-  // if (!mongoose.Types.ObjectId.isValid(id))
-  //   return res.status(404).send(`No post with id: ${id}`);
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(404).send(`No post with id: ${id}`);
 
-  // const updatedPost = { parkingid, occupied, _id: id };
-  // await ParkingData.findByIdAndUpdate(id, updatedPost, { new: true });
+  const updatedPost = { occupied, _id: id };
+  await ParkingData.findByIdAndUpdate(id, updatedPost, { new: true });
   res.json(updatedPost);
 };
+
     
 export default router;
