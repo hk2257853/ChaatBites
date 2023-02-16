@@ -25,6 +25,7 @@ root.render(
         <Route path="/auth" element={<Auth />} />
         <Route path="/admin" element={<AdminProduct />} />                
         <Route path="/cart"  element={<Cart/>}/>
+        {/* <Route path="/parking" element={<} */}
       </Routes>
       <div className="foot">
       <Footer/>
