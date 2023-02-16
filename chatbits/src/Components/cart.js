@@ -28,7 +28,7 @@ const Cart =()=>{
 
     return(
         <>
-        {cartdata.length===0 && <h1 className="text-center">Continue Shopping with us!</h1>}
+        {cartdata.length===0 && <h1 className="text-center">Come again!</h1>}
         <button onClick={BuyNowHandler} className="btn btn-primary m-3 float-end" >Buy Now</button>
         <div className="card-container container">
           {

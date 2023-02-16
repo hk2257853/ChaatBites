@@ -31,7 +31,7 @@ root.render(
         {/* <Route path="/parking" element={<} */}
       </Routes>
       <div className="foot">
-      <Footer/>
+      {/* <Footer/> */}
       </div>
     </BrowserRouter>
   </React.StrictMode>

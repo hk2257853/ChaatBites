@@ -52,25 +52,33 @@ function Navbar() {
                                 <img src={logo} alt="logo" />
                             </div> */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="items">
-                            <li className="nav-item">
+                            {
+                             !user?.response.result.admin && <li className="nav-item">
                                 <Link to="/" className="nav-link active">Home</Link>
                             </li>
-                            <li className="nav-item">
+                            }
+                            {
+ !user?.response.result.admin &&                           <li className="nav-item">
                                 <Link to="/menu" className="nav-link active">Menu</Link>
                             </li>
-                            <li className="nav-item">
+}
+{
+ !user?.response.result.admin &&                           <li className="nav-item">
                                 <Link to="/aboutus" className="nav-link active">About us</Link>
                             </li>
-                            <li className="nav-item">
+}
+{
+ !user?.response.result.admin &&                           <li className="nav-item">
                                 <Link to="/contactus" className="nav-link active">Contactus</Link>
                             </li>
+}
                             <li className="nav-item">
                                 <Link to="/parking" className="nav-link active">Parking</Link>
                             </li>
                             {                                
                                 user?.response.result.admin &&
                             <li className="nav-item">
-                                <Link to="/admin" className="nav-link active">Add Menuitem</Link>
+                                <Link to="/admin" className="nav-link active">Menu</Link>
                             </li>
                             }
                             {/* <li className="nav-item">

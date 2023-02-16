@@ -6,15 +6,11 @@ import * as api from "../api"
 
 const AdminProduct = () => {
 
-    const [item,setItem] = useState({name: "",
-        image: "",
-        price: "",
-        description: ""
-    });
+    const [item,setItem] = useState();
 
     function handleChange(e) {
         setItem((item) => ({ ...item, [e.target.name]: e.target.value }));
-        // console.log(item)
+        console.log(item)
     }
 
     function handleSubmit(e) {
@@ -39,7 +35,7 @@ const AdminProduct = () => {
     return (
         <>
             <div className="container adminproduct-heading">
-                <h3>Sell your products</h3>
+                <h3> Add Item to Menu </h3>
             </div>
             <div className="container admin-form-container">
                 <form onSubmit={handleSubmit}>

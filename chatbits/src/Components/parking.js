@@ -1,5 +1,47 @@
+import { useEffect, useState } from "react";
 import './Css/parking.css'
+import * as api from "../api"
+
 const Parking = () => {
+    const [parkData, setParkData] = useState()
+
+    useEffect(() => {
+        try {
+            api.getParkingStatus()
+            .then((res) => {
+                setParkData(res.data)                
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
+    }, [])
+
+    // update parking status (flip occupied)
+    const updateOccupied = (e) => {
+        try {
+            const id = e.target.id
+
+            const updatedData = parkData.map((parkData) => {
+                if (parkData.id === id) {
+                    return {
+                        ...parkData,
+                        occupied: !parkData.occupied
+                    }
+                } else {
+                    return parkData
+                }
+            })
+
+            setParkData(updatedData)
+            api.updateParkingStatus(id, updatedData)
+            .then((res) => {
+                console.log(res)
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
     return (
         <div>
             <section className="sec1">
@@ -11,37 +53,13 @@ const Parking = () => {
                         <div className="zone btn-danger">Zone 4</div>
                         <div className="zone btn-danger">Zone 5</div>
                     </div>
-
-                    <div className="ParkBoxes" id="p1">1</div>
-                    <div className="ParkBoxes" id="p2">2</div>
-                    <div className="ParkBoxes" id="p3">3</div>
-                    <div className="ParkBoxes" id="p4">4</div>
-                    <div className="ParkBoxes" id="p5">5</div>
-                    <div className="ParkBoxes" id="p6">6</div>
-                    <div className="ParkBoxes" id="p7">7</div>
-                    <div className="ParkBoxes" id="p8">8</div>
-                    <div className="ParkBoxes" id="p9">9</div>
-                    <div className="ParkBoxes" id="p10">10</div>
-                    <div className="ParkBoxes" id="p11">11</div>
-                    <div className="ParkBoxes" id="p12">12</div>
-                    <div className="ParkBoxes" id="p13">13</div>
-                    <div className="ParkBoxes" id="p14">14</div>
-                    <div className="ParkBoxes" id="p15">15</div>
-                    <div className="ParkBoxes" id="p16">16</div>
-                    <div className="ParkBoxes" id="p17">17</div>
-                    <div className="ParkBoxes" id="p18">18</div>
-                    <div className="ParkBoxes" id="p19">19</div>
-                    <div className="ParkBoxes" id="p20">20</div>
-                    <div className="ParkBoxes" id="p21">21</div>
-                    <div className="ParkBoxes" id="p22">22</div>
-                    <div className="ParkBoxes" id="p23">23</div>
-                    <div className="ParkBoxes" id="p24">24</div>
-                    <div className="ParkBoxes" id="p25">25</div>
-                    <div className="ParkBoxes" id="p26">26</div>
-                    <div className="ParkBoxes" id="p27">27</div>
-                    <div className="ParkBoxes" id="p28">28</div>
-                    <div className="ParkBoxes" id="p29">29</div>
-                    <div className="ParkBoxes" id="p30">30</div>
+                    {
+                        parkData && parkData.map((parkData) => {
+                            return (
+                                parkData.occupied ? <button id={parkData.id} onClick={updateOccupied} className="ParkBoxes occupied"></button> : <button id={parkData.id} onClick={updateOccupied} className="ParkBoxes notoccupied"></button>
+                            )
+                        })
+                    }
                     <div className="ParkBoxeBelow">PARKING ZONE</div>
                 </div>
             </section>
