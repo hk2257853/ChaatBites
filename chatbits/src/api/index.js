@@ -16,3 +16,7 @@ API.interceptors.request.use((req) => {
 export const signIn = (formData) => API.post("/user/signin", formData);
 export const signUp = (formData) => API.post("/user/signup", formData);
 
+
+export const fetchCartItem =()=>API.get("/cart");
+export const addCartItem =(newCartItem)=>API.post("/cart",newCartItem)
+export const deleteCartItem =()=>API.delete("/cart");

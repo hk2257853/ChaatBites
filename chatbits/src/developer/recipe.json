@@ -1,0 +1,22 @@
+{
+    "title":"Tomato soup",
+    "img":"https://images-platform.99static.com//V0SRoNt6bCpkqO65TgBXN4WfcKo=/308x98:1691x1481/fit-in/500x500/99designs-contests-attachments/98/98204/attachment_98204581",
+    "recipe":[
+        {
+            "name":"tomato", 
+            "price": 50,
+            "quantity": 3
+        },
+        {
+            "name":"water", 
+            "price": 50,
+            "quantity": 2
+        },
+        {
+            "name":"masala", 
+            "price": 50,
+            "quantity": 4
+        }
+        
+    ]
+}
