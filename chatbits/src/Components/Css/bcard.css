@@ -7,12 +7,15 @@
     column-gap: 20px;
     row-gap: 20px;
 }
-.card-body{
+
+.card-body {
     text-align: center;
 }
-.food-image{
+
+.food-image {
     border-radius: 0 0 0 0;
 }
-.card{
+
+.card {
     border-radius: 1.1rem 1.1rem;
 }
