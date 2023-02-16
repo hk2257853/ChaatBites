@@ -1,26 +1,26 @@
 import react from 'react';
 import '../Css/bcard.css'
+
 function Bcards(){
     return (
         <>
-        <div classNameName="container">
-            <div classNameName="d-flex">
-            <div class="card" style="width: 18rem;">
-                <div class="food-image">
-                    <img src="hero.png" class="card-img-top" alt="..."/>
+        <div className="container">
+            <div className="d-flex">
+            <div className="card" >
+                <div className="food-image">
+                    <img src="hero.png" className="card-img-top" alt="..."/>
                 </div>
 
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary">Rs 100</a>
-
+                    <a href="#" className="btn btn-primary">Rs 100</a>
                 </div>
             </div>
             </div>
         </div>
-
+        {/* style="width: 18rem;" */}
         </>
 
     )

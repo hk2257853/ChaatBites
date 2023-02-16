@@ -11,27 +11,20 @@ function Navbar() {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile"))); //get user from local storage
     const location = useLocation();
     const navigate = useNavigate();
-    // const user = false;
+
     useEffect(
         () => {
-            //   to refresh on login
             const token = user?.response.token;
-            // console.log(user?.response.result.utype)
-            //   console.log(user.response.result.utype)
-            if (token) {
-                const decodedToken = decode(token);
-                //console.log(decodedToken.exp)
-                if (decodedToken.exp * 1000 < new Date().getTime()) {
-                    logout();
-                }
 
-                setUser(JSON.parse(localStorage.getItem("profile")));
-            }
-        },
-        [
-            location,
-        ] /*on location change run this to set user. No no need to refresh to get profile in navbar on login */
-    );
+            if (token) {
+                const decodedToken = decode(token);              
+                if (decodedToken.exp * 1000 < new Date().getTime()) {
+                logout();
+              }
+          }
+          setUser(JSON.parse(localStorage.getItem("profile")));
+          }, [location]);    
+          /*on location change run this to set user. No no need to refresh to get profile in navbar on login */
 
     const logout = () => {
         localStorage.clear();
@@ -72,11 +65,11 @@ function Navbar() {
                                 <Link to="/contactus" className="nav-link active">Contactus</Link>
                             </li>
                             {                                
-                                user?.response.result.utype === "seller" &&
+                                user?.response.result.admin &&
                             <li className="nav-item">
-                                <Link to="/admin" className="nav-link active">Admin</Link>
+                                <Link to="/admin" className="nav-link active">Add Menuitem</Link>
                             </li>
-}
+                            }
                             {/* <li className="nav-item">
                                 <Link to="/owner" className="nav-link active">Owner</Link>
                             </li> */}
