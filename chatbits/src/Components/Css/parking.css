@@ -1,0 +1,213 @@
+
+.sec1{
+    display:flex;
+    position: relative;
+    justify-content:center;
+    align-items:center;
+    min-height: 75vh;
+    width: 100vw;
+   
+}
+.parkingLot{
+    position: relative;
+    height:60vh;
+    width:70vw;
+    background-color: rgb(231, 231, 231);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 20px;
+    row-gap: 25px;
+    padding:25px;
+    border-radius: 8px;
+}
+
+.anotations{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    column-gap: 20px;
+    height:20px ;
+    width:70vw ;
+    justify-content: space-evenly;
+  
+  
+}
+
+.zone{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    height:20px;
+    width:180px;
+    background-color: rgb(241, 13, 13);
+    color: white;
+    font-family: "century gothic";
+    font-size: x-small;
+
+}
+
+#p3{
+    background-color: rgb(233, 46, 21);
+}
+.ParkBoxes{
+    position: relative;
+    height:80px ;
+    width:80px ;
+    border-radius: 10px;
+    background-color: rgb(21, 233, 49);
+    font-family: "century gothic";
+    color:white;
+    box-sizing: border-box;
+    padding:5px;
+
+
+}
+
+.ParkBoxeBelow{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:80px ;
+    width:80px ;
+    border-radius: 10px;
+    /* background-color: rgb(255, 255, 255);  */
+    font-family: "century gothic";
+    color:rgb(27, 27, 27);
+    font-size: 40px;
+    /* opacity: 70%; */
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+.sec2{
+    position: relative;
+    /* background-color: rgb(199, 196, 196); */
+    width:100vw;
+    height: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+.detailsContainer{
+    position: relative;
+    width:70vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+  
+    /* background-color: red; */
+}
+
+.actualdeets{
+    position: relative;
+    width:10rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    font-family: "century gothic";
+    white-space: nowrap;
+    column-gap: 2px;
+  
+}
+
+.avaialble{
+    position: relative;
+    width:1.5rem;
+    height: 1.5rem;
+    background-color: rgb(21, 233, 49);
+    border-radius: 4px;
+}
+
+.NOTavaialble{
+    position: relative;
+    width:1.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    background-color: rgb(233, 46, 21);;
+}
+
+.CTNTT{
+    position: relative;
+    width:7rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PriceDeets{
+    position: relative;
+    width:50rem;
+    height: 10rem;
+    display: flex;
+    font-family: "century gothic";
+}
+
+
+
+
+
+
+
+.sec3{
+    position: relative;
+    /* background-color: rgb(199, 196, 196); */
+    width:100vw;
+    height:30vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.sec3 li{
+ list-style: square;
+ font-family: "century gothic";
+}
+
+.sec3 ul{
+
+    font-family: "century gothic";
+   }
+
+.sec3Cont{
+    display:flex;
+    position: relative;
+    height:27vh;
+    width:29vw;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    padding: 6px 12px;
+ 
+}
+
+.sec4{
+    position: relative;
+    height:10vh;
+    width:30vw;
+   
+ 
+}

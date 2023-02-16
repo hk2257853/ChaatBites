@@ -4,7 +4,7 @@ import { AiTwotoneStar } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { TbMinusVertical } from "react-icons/tb";
 import { useNavigate } from 'react-router';
-
+import Parking from './parking';
 function Main() {
 
     let navigate = useNavigate();
@@ -75,6 +75,7 @@ function Main() {
                     </div> */}
                     {/* <i className="fa-solid fa-star-sharp"></i> */}
                 </div>
+                <Parking/>
             </div>
            
         </>
