@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import * as api from "../../api"
 import Timer from "./timer";
 import Cards from "./cards";
+import Bcards from './bcards';
 import Recipe from "./recipe"
 import '../Css/menu.css'
+// imp
 import Paggination from "./paggination";
 import Suggest from "./suggest";
 
@@ -36,7 +38,19 @@ function Menu() {
   }
   return (
     <>
-      {<Timer />}
+
+    {/* <Bcards/> */}
+
+    <h1>dhfkd</h1>
+
+    <Bcards/>
+
+
+
+
+
+
+      {/* {<Timer />}
       {<Suggest item={item}/>}
       <div className="container-text container text-center">
         <h4>All the vegies you Need</h4>
@@ -74,7 +88,7 @@ function Menu() {
         </div>
       </div>
 
-      {<Recipe />}
+      {<Recipe />} */}
 
     </>
   );

@@ -1,0 +1,18 @@
+.container {
+    /* border: 1px solid black; */
+    margin-top: 2rem;
+}
+
+.d-flex {
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.card-body{
+    text-align: center;
+}
+.food-image{
+    border-radius: 0 0 0 0;
+}
+.card{
+    border-radius: 1.1rem 1.1rem;
+}
