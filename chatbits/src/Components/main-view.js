@@ -61,21 +61,8 @@ function Main() {
                             <p className='num last'>4.5</p>
                                 </div>
                         </div>
-                       
-                        
-
-
                     </div>
-                    {/* <div className="cutomer-info-item">
-                        <h3 className='consumertext'>Ratings</h3>
-                        <div className="rating">
-                            <AiTwotoneStar size="1rem" />
-                            <p>4.5</p>
-                        </div>
-                    </div> */}
-                    {/* <i className="fa-solid fa-star-sharp"></i> */}
                 </div>
-                <Parking/>
             </div>
            
         </>

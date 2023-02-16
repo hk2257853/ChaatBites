@@ -64,6 +64,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link to="/contactus" className="nav-link active">Contactus</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to="/parking" className="nav-link active">Parking</Link>
+                            </li>
                             {                                
                                 user?.response.result.admin &&
                             <li className="nav-item">

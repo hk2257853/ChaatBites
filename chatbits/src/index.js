@@ -10,7 +10,9 @@ import Auth from "./Components/auth";
 import AdminProduct from "./Components/adminproduct";
 import Cart from "./Components/cart";
 import Footer from "./Components/footer";
+import Parking from "./Components/parking";
 import './Components/Css/index.css'
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 
 root.render(
@@ -25,6 +27,7 @@ root.render(
         <Route path="/auth" element={<Auth />} />
         <Route path="/admin" element={<AdminProduct />} />                
         <Route path="/cart"  element={<Cart/>}/>
+        <Route path="/parking"  element={<Parking/>}/>
         {/* <Route path="/parking" element={<} */}
       </Routes>
       <div className="foot">
