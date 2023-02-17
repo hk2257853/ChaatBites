@@ -159,7 +159,7 @@ const Auth = () => {
                           </a>
                         </div> */}
                         
-                        {isSignup && (
+                        {/* {isSignup && (
                         <div className="row">  
                       <div className="form-check col">
                         <input className="form-check-input" type="radio" onChange={handleChange} name="uType" id="buyerType" value="buyer"/>
@@ -173,7 +173,7 @@ const Auth = () => {
                           Seller
                         </label>
                       </div>
-                      </div>)}
+                      </div>)} */}
 
                       <div className="col-12">
                           <button
