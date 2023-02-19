@@ -4,7 +4,7 @@ from collections import defaultdict
 import json
 
 #Data processing (csv to list, cleaning of data)
-df = pd.read_csv("machine learning\market_data.csv", header=None, on_bad_lines="skip")
+df = pd.read_csv("market_data.csv", header=None)
 df.isnull().sum() #column wise missing values (NaN)
 df.values.tolist()
 T = []

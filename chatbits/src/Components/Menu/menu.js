@@ -38,7 +38,7 @@ function Menu() {
       {<Timer />}
       {<Suggest item={item}/>}
       <div className="container-text container text-center">
-        <h4>All the vegies you Need</h4>
+        <h4>All the snacks you Need</h4>
       </div>
       <div className="search-container container text-center">
         <div className="serach-bar">
